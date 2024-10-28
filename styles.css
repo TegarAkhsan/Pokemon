@@ -4,11 +4,14 @@ body {
     padding: 0;
 }
 
-nav{
+nav {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px;
 }
 
 .logo{
@@ -25,7 +28,7 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color:#0a1a31;
+    color:white;
     font-weight: 800;
 }
 
@@ -60,11 +63,15 @@ nav ul li a{
 .text-container h1 {
     font-size: 70px;
 }
-  
+
 .text-container p {
     font-size: 18px;
     margin: 10px 0 30px;
     text-align: justify;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .col-1{  
@@ -133,7 +140,7 @@ nav ul li a{
 .col-3-pikachu{
     position: absolute;
     width: auto;
-    transform: translate(160%, -45%);
+    transform: translate(150%, -45%);
 }
 
 .col-3-text-container{
