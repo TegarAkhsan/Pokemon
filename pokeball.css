@@ -148,3 +148,43 @@ nav ul li a{
     color: white;
 }
 
+.all-pokeball{
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+.con-4-pokeball{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin: 50px;
+}
+
+.card{
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    width: 200px;
+    box-shadow: 0px 0px 10px rgba(187, 187, 187, 0.5);
+    background-image: url(pokedex-image/Background-Pokedex-Img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card button {
+    background-color: #ff5a00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer; /*mengubah cursor ke tangan*/
+}  
+
+
+
+
