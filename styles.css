@@ -107,7 +107,7 @@ nav ul li a{
 
 .card-2 img {
     width: auto;
-    transform: translate(0%, -30%);
+    transform: translate(0%, -20%);
 }
 
 .col-2-text-container{
@@ -133,7 +133,7 @@ nav ul li a{
 .col-3-pikachu{
     position: absolute;
     width: auto;
-    transform: translate(180%, -45%);
+    transform: translate(160%, -45%);
 }
 
 .col-3-text-container{
