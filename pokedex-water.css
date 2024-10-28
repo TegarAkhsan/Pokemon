@@ -236,7 +236,7 @@ nav ul li a{
 
 .card:hover {
     transform: rotate(10deg); /* Slight rotation to the right */
-    box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8); /* Orange glow effect */
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.8); /* Orange glow effect */
 }
 
 /* Other styles remain unchanged */
