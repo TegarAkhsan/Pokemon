@@ -23,9 +23,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
-    border-radius: 15px; /* Optional: to add rounded corners */
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    border-radius: 15px;
 }
 
 .logo{
@@ -121,45 +121,45 @@ nav ul li a{
 .type-pokemon button {
     margin-left: 20px;
     justify-content: space-between;
-    background-color: #606060; /* Default background color */
+    background-color: #606060;
     color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover */
+    transition: background-color 0.3s; 
 }
 
 .type-pokemon .fire:hover {
-    background-color: #ff4500; /* Bright orange for Fire */
+    background-color: #ff4500;
 }
 
 .type-pokemon .water:hover {
-    background-color: #1e90ff; /* Dodger Blue for Water */
+    background-color: #1e90ff;
 }
 
 .type-pokemon .grass:hover {
-    background-color: #32cd32; /* Lime Green for Grass */
+    background-color: #32cd32; 
 }
 
 .type-pokemon .ground:hover {
-    background-color: #d2b48c; /* Tan for Ground */
+    background-color: #d2b48c; 
 }
 
 .type-pokemon .rock:hover {
-    background-color: #a0522d; /* Sienna for Rock */
+    background-color: #a0522d; 
 }
 
 .type-pokemon .dark:hover {
-    background-color: #000000; /* Dim Gray for Dark */
+    background-color: #000000; 
 }
 
 .type-pokemon .dragon:hover {
-    background-color: #9932cc; /* Dark Orchid for Dragon */
+    background-color: #9932cc; 
 }
 
 .type-pokemon .steel:hover {
-    background-color: #c0c0c0; /* Silver for Steel */
+    background-color: #c0c0c0; 
 }
 
 .con-1-pokedex{
@@ -206,7 +206,7 @@ nav ul li a{
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    cursor: pointer; /*mengubah cursor ke tangan*/
+    cursor: pointer;
 }  
 
 .card h2 {
@@ -228,23 +228,22 @@ nav ul li a{
     position: relative;
 }
 
-/* Card rotation and glow effect */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for rotation and glow */
-    position: relative; /* Required for absolute positioning of the glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    position: relative; 
 }
 
 .card:hover {
-    transform: rotate(10deg); /* Slight rotation to the right */
-    box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8); /* Orange glow effect */
+    transform: rotate(10deg); 
+    box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8); 
 }
 
-/* Other styles remain unchanged */
 
 
-/* Popup styling */
+
+
 .popup {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -253,12 +252,12 @@ nav ul li a{
     color: white;
     padding: 20px;
     border-radius: 10px;
-    z-index: 1000; /* Ensure it's on top */
+    z-index: 1000;
     width: 300px;
 }
 
 .popup.active {
-    display: block; /* Show the popup when active */
+    display: block;
 }
 
 .popup .close {

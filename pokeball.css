@@ -5,11 +5,14 @@ body {
     background-color: black;
 }
 
-nav{
+nav {
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
 }
 
 .logo{
@@ -182,8 +185,62 @@ nav ul li a{
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    cursor: pointer; /*mengubah cursor ke tangan*/
+    cursor: pointer;
 }  
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.bottom-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    position: relative; 
+}
+
+.card:hover {
+    transform: rotate(-10deg); 
+    box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8); 
+}
+
+
+.popup {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 300px;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup .close {
+    cursor: pointer;
+    color: #ff5a00;
+    float: right;
+}
 
 
 
