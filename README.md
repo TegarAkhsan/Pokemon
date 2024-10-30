@@ -32,4 +32,4 @@ Kami mengundang kontribusi dari siapa pun untuk meningkatkan Website Pokemon.
 Jika Anda menemukan bug atau memiliki permintaan fitur, silakan buka isu.
 Untuk berkontribusi kode, fork repositori ini dan kirim pull request.
 
-Jika Anda memiliki pertanyaan, silakan hubungi kami di contact @handika.23047@mhs.unesa.ac.id
+Jika Anda memiliki pertanyaan, silakan hubungi kami di contact handika.23047@mhs.unesa.ac.id, Tegar.23038@mhs.unesa.ac.id
