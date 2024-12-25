@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokémon World</title>
+        <link rel="stylesheet" href="css/pokedex-water.css">
+
+    </head>
+    <body>
+        <div class="hero">
+            <nav>
+                <img src="images/Logo-image/Logo.png" class="logo">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="pokedex.html">Pokedex</a></li>
+                    <li><a href="pokeball.html">Pokeball</a></li>
+                    <li><a href="#news">News</a></li>
+                </ul>
+            </nav>
+
+            <div class="text-img-container">
+                <div class="text-container">
+                    <!-- <h1>Charizard</h1>
+                    <p>Mulailah petualanganmu sekarang dan tangkap semua Pokémon yang luar biasa ini! Dari yang terkuat hingga yang paling langka, setiap Pokémon memiliki keunikan dan kekuatannya sendiri yang menanti untuk kamu temukan. 
+                        Koleksi mereka, latih untuk menjadi lebih kuat, dan lengkapi Pokédex-mu dengan berbagai jenis Pokémon dari seluruh penjuru dunia.
+                        Ayo, jangan lewatkan kesempatan untuk menjadi Trainer Pokémon sejati dan raih prestasi dengan mengumpulkan semuanya! Tangkap dan koleksi Pokémon favoritmu sekarang—siapakah yang akan kamu temukan berikutnya?
+                    </p> -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="title">
+            <img src="images/pokedex-image/Pokedex-Catch-Them-Text.png" alt="" class="title-pokedex">
+        </div>
+        <div class="title-type-pokemon">
+            <h2>Pokemon Type</h2>
+        </div>
+        <div class="type-pokemon">
+            <button class="fire"onclick="window.location.href='pokedex.html'">Fire</button>
+            <button class="water"onclick="window.location.href='pokedex-water.html'">Water</button>
+            <button class="grass">Grass</button>
+            <button class="ground">Ground</button>
+            <button class="rock">Rock</button>
+            <button class="dark">Dark</button>
+            <button class="dragon">Dragon</button>
+            <button class="steel">Steel</button>
+        </div>
+        
+
+        <div class="con-1-pokedex">
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Squirtle.png" alt="" class="card-pokemon">
+                <h2>Squirtle</h2>
+                <div class ="type">
+                    <button class="Fire-type">Water</button>
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Wartortle.png">
+                <h2>Wartortle</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Blastoise.png">
+                <h2>Blastoise</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+        </div> 
+        
+        <div class="con-2-pokedex">
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Poliwag.png" alt="">
+                <h2>Poliwag</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Poliwhirl.png">
+                <h2>Poliwhirl</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Poliwrath.png">
+                <h2>Poliwrath</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="con-3-pokedex">
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Totodile.png" alt="">
+                <h2>Totodile</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Croconaw.png">
+                <h2>Croconaw</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pokedex-image/Pokemon/Feraligatr.png">
+                <h2>Feraligatr</h2>
+                <div class ="type">
+                    <button>Water</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="popup" id="popup">
+            <span class="close" onclick="closePopup()">✖</span>
+            <h2 id="pokemon-name"></h2>
+            <p id="pokemon-description"></p>
+        </div>
+        
+        <script>
+            // Data for each Pokémon (you can expand this with actual descriptions)
+            const pokemonData = {
+                
+            "Squirtle": "Squirtle is a Water-type Pokémon. It evolves into Wartortle.",
+            "Wartortle": "Wartortle is the evolved form of Squirtle and a Water-type Pokémon.",
+            "Blastoise": "Blastoise is the final form of Squirtle, known for its powerful water cannons.",
+            "Poliwag": "Poliwag is a Water-type Pokémon known for its spiral pattern on its belly.",
+            "Poliwhirl": "Poliwhirl is the evolved form of Poliwag, recognized by its round body and hands.",
+            "Poliwrath": "Poliwrath is the final evolution of Poliwag, known for its fighting ability and strong arms.",
+            "Totodile": "Totodile is a Water-type Pokémon from the Johto region, known for its playful nature.",
+            "Croconaw": "Croconaw is the evolved form of Totodile, known for its strong jaws and agility.",
+            "Feraligatr": "Feraligatr is the final evolution of Totodile, known for its fierce temper and powerful bite."
+            };
+        
+            const popup = document.getElementById("popup");
+        
+            // Function to show the popup
+            function showPopup(pokemon) {
+                const name = document.getElementById("pokemon-name");
+                const description = document.getElementById("pokemon-description");
+        
+                name.innerText = pokemon;
+                description.innerText = pokemonData[pokemon];
+        
+                popup.classList.add("active");
+            }
+        
+            // Function to close the popup
+            function closePopup() {
+                popup.classList.remove("active");
+            }
+        
+            // Add click event to each card
+            document.querySelectorAll(".card").forEach(card => {
+                card.addEventListener("click", () => {
+                    const pokemonName = card.querySelector("h2").innerText;
+                    showPopup(pokemonName);
+                });
+            });
+        </script>
+        
+    </body>
+</html>
