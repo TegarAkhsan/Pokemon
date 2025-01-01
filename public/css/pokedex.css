@@ -1,63 +1,140 @@
-/* body{
-    background-image: url(pokedex-image/Background-Pokedex-Img.png);
-    background-position: center;
-    background-repeat: no-repeat;  
-} */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000;
-
+    /* background-color: #000000; */
 }
 
-/* background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-overflow: hidden;
-position: relative; */
-
-nav {
-    padding: 10px;
+/* Header Styles */
+.website-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(10px); 
-    border-radius: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #6a0dad, #1c1c1e);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.logo{
-    width: 140px;
-    padding-left: 100px;
+/* Logo and Brand Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-nav ul li{
-    display: inline-block;
+.logo {
+    height: 60px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
     list-style: none;
-    margin: 10px 15px;
-    padding-right: 100px;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color:white;
-    font-weight: 800;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover {
-    color: #ccc;
+nav ul li a:hover,
+nav ul li a.active {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+    color: white;
 }
 
-.hero{
-    width: auto;
-    background-image: url(pokedex-image/Hero-Img.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons .sign-in,
+.header-buttons .sign-up {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.header-buttons .sign-in {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.header-buttons .sign-in:hover {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    color: white;
+    border-color: transparent;
+}
+
+.header-buttons .sign-up {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+}
+
+.header-buttons .sign-up:hover {
+    box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Style untuk menu hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.hero {
     position: relative;
+    width: 100%;
+    height: 100vh; /* Hero image memenuhi tinggi layar */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Hero image berada di belakang konten */
+}
+
+.hero-space {
+    background-color: black; /* Space hitam setelah hero image */
+    width: 100%;
+    height: 100px; /* Tinggi space hitam */
 }
 
 .hero::after {
@@ -70,65 +147,80 @@ nav ul li a{
     background: linear-gradient(0deg,rgb(0, 0, 0)15%, rgba(255,255,255,0)70%);
 }
 
-/* .hero::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    bottom: 0;
-    background: linear-gradient(to bottom, #000080, #ADD8E6);
-} */
-
-
-.text-img-container{
-    margin-top: 50%;
+.type-pokemon {
+    padding-top: 200px;
+    padding-bottom: 100px;
     display: flex;
-    padding: 80px;
-    justify-content: space-between;
-}
-
-.text-container{
-    color: white;
-    font-size: 24px;
-}
-
-.text-container p{
-    padding-right: 40%;
-    text-align: justify;
-    font-size: 20px;
-}
-
-.img-container img{
-    width: auto;
-    transform: translate(180%, -60%);
-}
-
-.title-pokedex{
-    width: 500px;
-    margin-left: 33%;
-}
-
-.title-type-pokemon{
-    color: white;
-    padding-left: 120px;
-}
-
-.type-pokemon{
-    padding-left: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: black;
 }
 
 .type-pokemon button {
-    margin-left: 20px;
-    justify-content: space-between;
-    background-color: #606060;
-    color: #fff;
+    background: linear-gradient(135deg, #ff6347, #ffa07a);    /* Fire: Merah ke Oren */
+    color: black;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s; 
+    transition: background 0.3s ease-in-out;
 }
+
+.type-pokemon .water {
+    background: linear-gradient(135deg, #87CEFA, #4682B4);    /* Water: Biru Muda ke Biru Tua */
+}
+
+.type-pokemon .grass {
+    background: linear-gradient(135deg, #98FB98, #2E8B57);    /* Grass: Hijau Muda ke Hijau Tua */
+}
+
+.type-pokemon .ground {
+    background: linear-gradient(135deg, #D2B48C, #8B4513);    /* Ground: Coklat Muda ke Coklat Tua */
+}
+
+.type-pokemon .rock {
+    background: linear-gradient(135deg, #D3D3D3, #A9A9A9);    /* Rock: Abu Muda ke Abu Tua */
+}
+
+.type-pokemon .dark {
+    background: linear-gradient(135deg, #000000, #6A0DAD);    /* Dark: Hitam ke Ungguan */
+}
+
+.type-pokemon .dragon {
+    background: linear-gradient(135deg, #9370DB, #4682B4);    /* Dragon: Ungu ke Biru */
+}
+
+.type-pokemon .steel {
+    background: linear-gradient(135deg, #D3D3D3, #FFFFFF);    /* Steel: Abu Muda ke Putih */
+}
+
+.type-pokemon button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.type-pokemon button:active {
+    transform: scale(0.95);
+}
+
+
+.type-pokemon button:active {
+    transform: scale(0.95);                   /* Memberikan efek scale saat ditekan */
+}
+
+
+.type-pokemon button:hover {
+    background-color: #ff4500;         /* Mengubah warna latar belakang saat tombol di-hover */
+}
+
 
 .type-pokemon .fire:hover {
     background-color: #ff4500;
@@ -162,28 +254,80 @@ nav ul li a{
     background-color: #c0c0c0; 
 }
 
-.con-1-pokedex{
+.con-1-pokedex {
     display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: linear-gradient(to bottom, #000000, red);
 }
+
+.card {
+    background-color: #1c1c1e;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-pokemon {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #2a2a2e;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.type {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
 
 .con-2-pokedex{
     display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: red;
 }
 
 .con-3-pokedex{
     display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: linear-gradient(to bottom, red, #000000);
 }
 
 .card{
@@ -238,10 +382,6 @@ nav ul li a{
     box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8); 
 }
 
-
-
-
-
 .popup {
     display: none;
     position: fixed;
@@ -265,3 +405,172 @@ nav ul li a{
     color: #ff5a00;
     float: right;
 }
+
+/* CSS untuk tampilan responsif */
+
+/* Ukuran layar kecil (ponsel) */
+@media (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Tampilkan tombol toggle */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.95);
+        width: 200px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .nav-links ul li a:hover {
+        background: linear-gradient(to right, #ff4500, #ff1493);
+        color: white;
+    }
+
+    .header-buttons {
+        display: none; /* Sembunyikan tombol di luar toggle menu */
+    }
+    .website-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero {
+        height: 50vh; /* Hero image lebih kecil */
+    }
+
+    .hero-space {
+        height: 50px; /* Tinggi space hitam */
+    }
+
+    .type-pokemon {
+        padding: 20px 5%;
+        gap: 10px;
+    }
+
+    .type-pokemon button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .con-1-pokedex, 
+    .con-2-pokedex, 
+    .con-3-pokedex {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+}
+
+/* Ukuran layar menengah (tablet) */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .type-pokemon {
+        gap: 15px;
+    }
+
+    .type-pokemon button {
+        width: 120px;
+        height: 45px;
+    }
+
+    .con-1-pokedex, 
+    .con-2-pokedex, 
+    .con-3-pokedex {
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card img {
+        max-height: 180px;
+    }
+}
+
+

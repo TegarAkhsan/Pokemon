@@ -5,37 +5,117 @@ body {
     background-color: black;
 }
 
-nav {
-    padding: 10px;
+.website-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-}
-
-.logo{
-    width: 140px;
-    padding-left: 100px;
-}
-
-nav ul li{
-    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #6a0dad, #1c1c1e);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo and Brand Name */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    height: 60px;
+    cursor: pointer;
+    margin-left: 50px;
+  }
+  
+  .brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  
+  /* Navigation Menu */
+  nav ul {
+    display: flex;
     list-style: none;
-    margin: 10px 15px;
-    padding-right: 100px;
-}
-
-nav ul li a{
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    color:white;
-    font-weight: 800;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+    color: white;
+  }
+  
+  /* Header Buttons */
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .header-buttons .sign-in,
+  .header-buttons .sign-up {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .header-buttons .sign-in {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .header-buttons .sign-in:hover {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    color: white;
+    border-color: transparent;
+  }
+  
+  .header-buttons .sign-up {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+  }
+  
+  .header-buttons .sign-up:hover {
+    box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.8);
+    transform: scale(1.05);
+  }
+
+  /* Style untuk menu hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
 .hero{
     width: auto;
-    background-image: url(pokeball-image/Background.png);
+    background-image: url(Background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -73,15 +153,6 @@ nav ul li a{
     display: flex;
 }
 
-/* .col-1-pokeball::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    bottom: 0;
-    background: linear-gradient(0deg,rgb(255, 0, 0)15%, rgba(0, 0, 0, 0)70%);
-} */
 
 .col-1-pokeball img{
     width: 250px;
@@ -186,7 +257,14 @@ nav ul li a{
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-}  
+    transition: all 0.3s ease-in-out;
+}
+
+.card button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+ 
 
 .card h2 {
     margin-bottom: 10px;
@@ -228,7 +306,7 @@ nav ul li a{
     color: white;
     padding: 20px;
     border-radius: 10px;
-    z-index: 1000;
+    z-index: 2000;
     width: 300px;
 }
 
@@ -241,6 +319,190 @@ nav ul li a{
     color: #ff5a00;
     float: right;
 }
+
+/* CSS untuk tampilan responsif */
+
+/* Aturan untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Tampilkan tombol toggle */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.95);
+        width: 200px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .nav-links ul li a:hover {
+        background: linear-gradient(to right, #ff4500, #ff1493);
+        color: white;
+    }
+
+    .header-buttons {
+        display: none; /* Sembunyikan tombol di luar toggle menu */
+    }
+    .website-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Sembunyikan gambar tiga bola di awal halaman */
+    .main-col {
+        display: none;
+    }
+
+    /* Atur Pokeball, Master Ball, dan Ultra Ball agar vertikal dengan penjelasan di bawahnya */
+    .col-1-pokeball, 
+    .col-2-pokeball, 
+    .col-3-pokeball {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .col-1-pokeball img,
+    .col-2-pokeball img,
+    .col-3-pokeball img {
+        margin-bottom: 10px;
+    }
+
+    .col-1-text, 
+    .col-2-text, 
+    .col-3-text {
+        text-align: center;
+        padding: 0;
+    }
+
+    .col-1-text p{
+        font-size: 14px; /* Ukuran font yang lebih kecil */
+    }
+    .col-2-text p{
+        font-size: 14px; /* Ukuran font yang lebih kecil */
+    }
+    .col-3-text p{
+        font-size: 14px; /* Ukuran font yang lebih kecil */
+    }
+
+    /* Susun kartu Pokeball secara vertikal */
+    .con-4-pokeball {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}
+
+
+
+/* Ukuran layar menengah (tablet) */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .type-pokemon {
+        gap: 15px;
+    }
+
+    .type-pokemon button {
+        width: 120px;
+        height: 45px;
+    }
+
+    .con-1-pokedex, 
+    .con-2-pokedex, 
+    .con-3-pokedex {
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card img {
+        max-height: 180px;
+    }
+}
+
 
 
 

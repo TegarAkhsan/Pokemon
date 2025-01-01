@@ -1,0 +1,471 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+
+}
+
+.website-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #6a0dad, #1c1c1e);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo and Brand Name */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 60px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: linear-gradient(to right, #ff4500, #ff1493);
+  box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+  color: white;
+}
+
+/* Header Buttons */
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.header-buttons .sign-in,
+.header-buttons .sign-up {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-buttons .sign-in {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.header-buttons .sign-in:hover {
+  background: linear-gradient(to right, #ff4500, #ff1493);
+  color: white;
+  border-color: transparent;
+}
+
+.header-buttons .sign-up {
+  background: linear-gradient(to right, #ff4500, #ff1493);
+  color: white;
+  box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+}
+
+.header-buttons .sign-up:hover {
+  box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Hero image memenuhi tinggi layar */
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Hero image berada di belakang konten */
+}
+
+.hero-space {
+    background-color: black; /* Space hitam setelah hero image */
+    width: 100%;
+    height: 100px; /* Tinggi space hitam */
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    bottom: 0;
+    background: linear-gradient(0deg,rgb(0, 0, 0)15%, rgba(255,255,255,0)70%);
+}
+
+.type-pokemon {
+    padding: 50px 10%; /* Jarak atas bawah untuk tombol */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: black; /* Background tombol */
+}
+
+.type-pokemon button {
+    background: linear-gradient(135deg, #ff6347, #ffa07a); /* Default: Fire */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.type-pokemon button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.type-pokemon button:active {
+    transform: scale(0.95);
+}
+
+/* Warna khusus untuk masing-masing tombol */
+.type-pokemon .water {
+    background: linear-gradient(135deg, #87CEFA, #4682B4);
+}
+
+.type-pokemon .grass {
+    background: linear-gradient(135deg, #98FB98, #2E8B57);
+}
+
+.type-pokemon .ground {
+    background: linear-gradient(135deg, #D2B48C, #8B4513);
+}
+
+.type-pokemon .rock {
+    background: linear-gradient(135deg, #D3D3D3, #A9A9A9);
+}
+
+.type-pokemon .dark {
+    background: linear-gradient(135deg, #000000, #6A0DAD);
+}
+
+.type-pokemon .dragon {
+    background: linear-gradient(135deg, #9370DB, #4682B4);
+}
+
+.type-pokemon .steel {
+    background: linear-gradient(135deg, #D3D3D3, #FFFFFF);
+}
+
+
+.con-1-pokedex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: linear-gradient(to bottom, #000000, #1e90ff);
+}
+
+.con-2-pokedex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: #1e90ff;
+}
+
+.con-3-pokedex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    background: linear-gradient(to bottom, #1e90ff, #000000);
+}
+
+.card{
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    width: 200px;
+    box-shadow: 0px 0px 10px rgba(187, 187, 187, 0.5);
+    background-image: url(pokedex-image/Background-Pokedex-Img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer; 
+}  
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.bottom-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: rotate(10deg);
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.8);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 300px;
+}
+
+.popup.active {
+    display: block;
+}
+
+.popup .close {
+    cursor: pointer;
+    color: #1e90ff;
+    float: right;
+}
+
+/* CSS untuk tampilan responsif */
+
+/* Ukuran layar kecil (ponsel) */
+@media (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Tampilkan tombol toggle */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.95);
+        width: 200px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .nav-links ul li a:hover {
+        background: linear-gradient(to right, #ff4500, #ff1493);
+        color: white;
+    }
+
+    .header-buttons {
+        display: none; /* Sembunyikan tombol di luar toggle menu */
+    }
+    .website-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero {
+        height: 50vh; /* Hero image lebih kecil */
+    }
+
+    .hero-space {
+        height: 50px; /* Tinggi space hitam */
+    }
+
+    .type-pokemon {
+        padding: 20px 5%;
+        gap: 10px;
+    }
+
+    .type-pokemon button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .con-1-pokedex, 
+    .con-2-pokedex, 
+    .con-3-pokedex {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+}
+
+/* Ukuran layar menengah (tablet) */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .type-pokemon {
+        gap: 15px;
+    }
+
+    .type-pokemon button {
+        width: 120px;
+        height: 45px;
+    }
+
+    .con-1-pokedex, 
+    .con-2-pokedex, 
+    .con-3-pokedex {
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .card img {
+        max-height: 180px;
+    }
+}

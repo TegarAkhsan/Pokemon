@@ -27,7 +27,7 @@ html {
   }
 }
 
-/* @media (min-width: 2560px) {
+@media (min-width: 2560px) {
   html {
     zoom: 1.7;
   }
@@ -37,7 +37,7 @@ html {
   html {
     zoom: 2.5;
   }
-} */
+}
 
 ::-webkit-scrollbar {
   width: 1.3rem;
@@ -57,10 +57,10 @@ html {
   background: #f9f9f9;
 }
 
-/* body {
+body {
   font-size: 1.6rem;
   background: var(--bg);
-} */
+}
 
 .container {
   max-width: 124rem;
@@ -68,9 +68,9 @@ html {
   margin: 0 auto;
 }
 
-/* .text-center {
+.text-center {
   text-align: center;
-} */
+}
 
 .section-heading {
   font-size: 3rem;
@@ -79,65 +79,82 @@ html {
 }
 
 #tranding {
-  padding: 0rem 0;
+  padding: 4rem 0;
 }
 
-/* @media (max-width:1440px) {
+@media (max-width:1440px) {
   #tranding {
     padding: 7rem 0;
   }
-} */
+}
 
 #tranding .tranding-slider {
-  height: 45rem;
+  height: 52rem;
   padding: 2rem 0;
   position: relative;
 }
 
-/* @media (max-width:500px) {
+@media (max-width:500px) {
   #tranding .tranding-slider {
     height: 45rem;
   }
-} */
+}
 
 .tranding-slide {
   width: 37rem;
   height: 42rem;
   position: relative;
-  align-items: center;
 }
 
-/* @media (max-width:300px) {
+@media (max-width:500px) {
   .tranding-slide {
     width: 28rem !important;
     height: 36rem !important;
   }
   .tranding-slide .tranding-slide-img img {
-    width: 20rem !important;
-    height: 28rem !important;
+    width: 28rem !important;
+    height: 36rem !important;
   }
-} */
+}
 
-.tranding-slide-img img {
-  width: 30rem;
-  height: 35rem;
+.tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 42rem;
   border-radius: 2rem;
   object-fit: cover;
 }
 
-/* .tranding-slide .tranding-slide-content {
+.tranding-slide .tranding-slide-content {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-} */
+}
 
-.tranding-slide-content-bottom {
+.tranding-slide-content .food-price {
   position: absolute;
-  bottom: 8rem;
+  top: 2rem;
+  right: 2rem;
+  color: var(--white);
+}
+
+.tranding-slide-content .tranding-slide-content-bottom {
+  align-items: center;
+  text-align: center;
+  bottom: 2rem;
   left: 2rem;
   color: var(--white);
+}
+
+.food-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.rating ion-icon {
+  color: var(--primary);
 }
 
 .swiper-slide-shadow-left,
@@ -167,8 +184,8 @@ html {
 
 @media (max-width:450px) {
   .tranding-slider-control .swiper-button-next {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
+    left: 80% !important;
+    transform: translateX(-80%) !important;
   }
 }
 
@@ -179,12 +196,12 @@ html {
   }
 }
 
-/* @media (max-width:450px) {
+@media (max-width:450px) {
   .tranding-slider-control .swiper-button-prev {
     left: 20% !important;
     transform: translateX(-20%) !important;
   }
-} */
+}
 
 .tranding-slider-control .slider-arrow {
   background: var(--white);

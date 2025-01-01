@@ -6,21 +6,27 @@
     <title>Pokémon World</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/styles.css">
+    <header class="website-header">
+      <div class="logo-container">
+          <img src="images/Logo-image/Logo.png" alt="Logo" class="logo">
+      </div>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav class="nav-links">
+          <ul>
+              <li><a href="home.html" class="active">Home</a></li>
+              <li><a href="pokedex.html" >Pokedex</a></li>
+              <li><a href="pokeball.html">Pokeball</a></li>
+          </ul>
+      </nav>
+      <div class="header-buttons">
+          <button class="sign-in">Sign In</button>
+          <button class="sign-up">Sign Up</button>
+      </div>
+  </header>
 </head>
 
 <body>
     <div class="hero">
-        <nav>
-            <img src="images/Logo-image/Logo.png" class="logo">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="pokedex.html">Pokedex</a></li>
-                <li><a href="pokeball.html">Pokeball</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="SignUp.html">SignUp</a></li>
-            </ul>
-        </nav>
         <!-- <img src="images/home-image/Main-Background.png" class="hero-img"> -->
         <div class="main-col">
             <div class="text-container">
@@ -122,9 +128,57 @@
         </div>
     </div>
 
+    <!-- PIKACHU SLIDER -->
+    <section id="tranding">
+      <div class="container-slider">
+        <div class="swiper tranding-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/home-image/Pikachu-Slider/Pikachu-1.jpg" alt="Tranding">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/home-image/Pikachu-Slider/Pikachu-2.jpg" alt="Tranding">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/home-image/Pikachu-Slider/Pikachu-3.jpg" alt="Tranding">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="images/home-image/Pikachu-Slider/Pikachu-4.jpg" alt="Tranding">
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </div>
+  
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="col-3">
         <div class="col-3-logo-text-container">
-            <img src="images/pokedex-image/Pikachu-Img.png" class="col-3-pikachu">
+            <!-- <img src="images/pokedex-image/Pikachu-Img.png" class="col-3-pikachu"> -->
             <div class="col-3-text-container">
                 <h2>Pikachu, the most well-known Pokémon</h2>
                 <p>Pikachu is a small, rodent-like Pokémon known for its electric powers, characterized by its bright yellow fur, red cheeks, and lightning bolt-shaped tail. 
@@ -144,85 +198,56 @@
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 1.png" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
+                  <!-- <div class="tranding-slide-content-bottom">
                     <h2 class="food-name">
                       Pikachu Movie
                     </h2>
-                  </div>
+                  </div> -->
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 2.jpg" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                      Pikachu Lagi
-                    </h2>
-                  </div>
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 3.jpg" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                      Pikachu Lagi
-                    </h2>
-                  </div>
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 4.jpg" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                      Pikachu Lagi
-                    </h2>
-                  </div>
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 5.jpg" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                      Pokoknya Pikachu
-                    </h2>
-                  </div>
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 6.jpg" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                      Ini pikachu lagi
-                    </h2>
-                  </div>
+
               </div>
               <!-- Slide-end -->
               <!-- Slide-start -->
               <div class="swiper-slide tranding-slide">
                 <div class="tranding-slide-img">
-                  <img src="images/home-image/Col 4 Image/download.png" alt="Tranding">
+                  <img src="images/home-image/Col 4 Image/Film 7.jpg" alt="Tranding">
                 </div>
-                  <div class="tranding-slide-content-bottom">
-                    <h2 class="food-name">
-                      Ya kan Pikachu
-                    </h2>
-                  </div>
               </div>
               <!-- Slide-end -->
             </div>
@@ -236,7 +261,6 @@
               </div>
               <div class="swiper-pagination"></div>
             </div>
-  
           </div>
         </div>
       </section>
@@ -253,5 +277,9 @@
                 The franchise has also produced several feature-length films, including Pokémon: The First Movie and Pokémon 2000.</p>
         </div>
     </div>
+
+    <section class="sec-2">
+
+    </section>
 </body>
 </html>

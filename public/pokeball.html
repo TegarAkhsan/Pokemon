@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon World</title>
     <link rel="stylesheet" href="css/pokeball.css">
-</head>
-<body>
-    <div class="hero">
-        <nav>
-            <img src="images/Logo-image/Logo.png" class="logo">
+    <header class="website-header">
+        <div class="logo-container">
+            <img src="images/Logo-image/Logo.png" alt="Logo" class="logo">
+        </div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <nav class="nav-links">
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="pokedex.html">Pokedex</a></li>
-                <li><a href="pokeball.html">Pokeball</a></li>
-                <li><a href="#news">News</a></li>
+                <li><a href="pokeball.html" class="active">Pokeball</a></li>
             </ul>
         </nav>
+        <div class="header-buttons">
+            <button class="sign-in">Sign In</button>
+            <button class="sign-up">Sign Up</button>
+        </div>
+    </header>
+</head>
+<body>
+    <div class="hero">
         <div class="main-col">
             <div class="container-1">
                 <img src="images/pokeball-image/Pokeball.png" class="redball">
@@ -93,8 +101,8 @@
         <div class="card">
             <img src="images/pokeball-image/Ball/Dive_Ball.png" alt="" class="dive-ball">
             <h2>Dive Ball</h2>
-            <div class ="type">
-                <button class="detail-ball">Read Detail</button>
+            <div class ="detail-ball">
+                <button>Read Detail</button>
             </div>
         </div>
 
@@ -127,8 +135,8 @@
         <div class="card">
             <img src="images/pokeball-image/Ball/Dream_Sport_Ball_Sprite.png" alt="" class="dive-ball">
             <h2>Sport Ball</h2>
-            <div class ="type">
-                <button class="detail-ball">Read Detail</button>
+            <div class ="detail-ball">
+                <button>Read Detail</button>
             </div>
         </div>
 
@@ -161,8 +169,8 @@
         <div class="card">
             <img src="images/pokeball-image/Ball/Dream_Lure_Ball_Sprite.png" alt="" class="dive-ball">
             <h2>Lure Ball</h2>
-            <div class ="type">
-                <button class="detail-ball">Read Detail</button>
+            <div class ="detail-ball">
+                <button>Read Detail</button>
             </div>
         </div>
 
@@ -239,5 +247,7 @@
             });
         });
     </script>
+    <script src="js/pokedex-header.js"></script>
+
 </body>
 </html>
