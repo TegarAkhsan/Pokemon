@@ -1,6 +1,6 @@
 <?php
 // Koneksi ke database
-$servername = "localhost:3308";
+$servername = "127.0.0.1";
 $db_name = "pokemon_db";
 $db_username = "root"; // Sesuaikan dengan username phpMyAdmin Anda
 $db_password = ""; // Sesuaikan dengan password phpMyAdmin Anda

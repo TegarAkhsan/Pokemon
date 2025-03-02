@@ -69,40 +69,59 @@ nav ul li a.active {
 .header-buttons {
     display: flex;
     gap: 10px;
-}
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-.header-buttons .sign-in,
-.header-buttons .sign-up {
+  .header-buttons .sign-in,
+  .header-buttons .sign-up,
+  .header-buttons .sign-out {
     border: none;
     padding: 8px 15px;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.header-buttons .sign-in {
+  }
+  
+  .header-buttons .sign-in {
     background: transparent;
     color: white;
     border: 2px solid white;
-}
-
-.header-buttons .sign-in:hover {
+  }
+  
+  .header-buttons .sign-in:hover {
     background: linear-gradient(to right, #ff4500, #ff1493);
     color: white;
     border-color: transparent;
-}
-
-.header-buttons .sign-up {
+  }
+  
+  .header-buttons .sign-up {
     background: linear-gradient(to right, #ff4500, #ff1493);
     color: white;
     box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
-}
-
-.header-buttons .sign-up:hover {
+  }
+  
+  .header-buttons .sign-up:hover {
     box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.8);
     transform: scale(1.05);
-}
+  }
+
+  .header-buttons .sign-out {
+    background: linear-gradient(to right, #ff4500, #ff1493);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
+  }
+  
+  .header-buttons .sign-out:hover {
+    box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.8);
+    transform: scale(1.05);
+  }
 
 /* Style untuk menu hamburger */
 .menu-toggle {
@@ -221,7 +240,6 @@ nav ul li a.active {
     background-color: #ff4500;         /* Mengubah warna latar belakang saat tombol di-hover */
 }
 
-
 .type-pokemon .fire:hover {
     background-color: #ff4500;
 }
@@ -254,14 +272,15 @@ nav ul li a.active {
     background-color: #c0c0c0; 
 }
 
-.con-1-pokedex {
+.con-pokedex {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    padding: 20px;
     gap: 20px;
+    padding: 20px;
     background: linear-gradient(to bottom, #000000, red);
 }
+
 
 .card {
     background-color: #1c1c1e;
@@ -311,25 +330,6 @@ button:hover {
     background-color: #FF4500;
 }
 
-
-.con-2-pokedex{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-    background: red;
-}
-
-.con-3-pokedex{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-    background: linear-gradient(to bottom, red, #000000);
-}
-
 .card{
     background-color: #1a1a1a;
     color: #fff;
@@ -339,7 +339,7 @@ button:hover {
     margin: 20px;
     width: 200px;
     box-shadow: 0px 0px 10px rgba(187, 187, 187, 0.5);
-    background-image: url(pokedex-image/Background-Pokedex-Img.png);
+    background-image: url(images/pokedex-image/Fire-Pokedex.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -506,10 +506,6 @@ button:hover {
         height: 50vh; /* Hero image lebih kecil */
     }
 
-    .hero-space {
-        height: 50px; /* Tinggi space hitam */
-    }
-
     .type-pokemon {
         padding: 20px 5%;
         gap: 10px;
@@ -521,9 +517,7 @@ button:hover {
         font-size: 14px;
     }
 
-    .con-1-pokedex, 
-    .con-2-pokedex, 
-    .con-3-pokedex {
+    .con-pokedex{
         flex-direction: column;
         align-items: center;
         gap: 15px;
@@ -558,9 +552,7 @@ button:hover {
         height: 45px;
     }
 
-    .con-1-pokedex, 
-    .con-2-pokedex, 
-    .con-3-pokedex {
+    .con-pokedex {
         gap: 20px;
     }
 

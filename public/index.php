@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,27 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon World</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="css/collection.css"> -->
     <link rel="stylesheet" href="css/styles.css">
-    <header class="website-header">
-      <div class="logo-container">
-          <img src="images/Logo-image/Logo.png" alt="Logo" class="logo">
-      </div>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-      <nav class="nav-links">
-          <ul>
-              <li><a href="home.html" class="active">Home</a></li>
-              <li><a href="pokedex.html" >Pokedex</a></li>
-              <li><a href="pokeball.html">Pokeball</a></li>
-          </ul>
-      </nav>
-      <div class="header-buttons">
-          <button class="sign-in">Sign In</button>
-          <button class="sign-up">Sign Up</button>
-      </div>
-  </header>
+    
 </head>
 
 <body>
+    <?php include 'header.php'; ?>
     <div class="hero">
         <!-- <img src="images/home-image/Main-Background.png" class="hero-img"> -->
         <div class="main-col">
@@ -277,9 +266,8 @@
                 The franchise has also produced several feature-length films, including Pokémon: The First Movie and Pokémon 2000.</p>
         </div>
     </div>
-
-    <section class="sec-2">
-
-    </section>
+    <script src="home_script.js"></script>
+    <section class="sec-2"> </section>
+    
 </body>
 </html>

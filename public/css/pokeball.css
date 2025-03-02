@@ -1,10 +1,13 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: black;
+    color: white;
 }
 
+/* Header Styles */
 .website-header {
     display: flex;
     align-items: center;
@@ -16,38 +19,36 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Logo and Brand Name */
-  .logo-container {
+}
+
+.logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .logo {
+}
+
+.logo {
     height: 60px;
     cursor: pointer;
     margin-left: 50px;
-  }
-  
-  .brand-name {
+}
+
+.brand-name {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0;
-  }
-  
-  /* Navigation Menu */
-  nav ul {
+}
+
+nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     gap: 20px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -55,55 +56,53 @@ body {
     padding: 8px 15px;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  nav ul li a:hover,
-  nav ul li a.active {
+}
+
+nav ul li a:hover,
+nav ul li a.active {
     background: linear-gradient(to right, #ff4500, #ff1493);
     box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
     color: white;
-  }
-  
-  /* Header Buttons */
-  .header-buttons {
+}
+
+.header-buttons {
     display: flex;
     gap: 10px;
-  }
-  
-  .header-buttons .sign-in,
-  .header-buttons .sign-up {
+}
+
+.header-buttons .sign-in,
+.header-buttons .sign-up {
     border: none;
     padding: 8px 15px;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .header-buttons .sign-in {
+}
+
+.header-buttons .sign-in {
     background: transparent;
     color: white;
     border: 2px solid white;
-  }
-  
-  .header-buttons .sign-in:hover {
+}
+
+.header-buttons .sign-in:hover {
     background: linear-gradient(to right, #ff4500, #ff1493);
     color: white;
     border-color: transparent;
-  }
-  
-  .header-buttons .sign-up {
+}
+
+.header-buttons .sign-up {
     background: linear-gradient(to right, #ff4500, #ff1493);
     color: white;
     box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5);
-  }
-  
-  .header-buttons .sign-up:hover {
+}
+
+.header-buttons .sign-up:hover {
     box-shadow: 0px 6px 20px rgba(255, 69, 0, 0.8);
     transform: scale(1.05);
-  }
+}
 
-  /* Style untuk menu hamburger */
 .menu-toggle {
     display: none;
     background: none;
@@ -113,7 +112,8 @@ body {
     cursor: pointer;
 }
 
-.hero{
+/* Hero Section */
+.hero {
     width: auto;
     background-image: url(Background.png);
     background-repeat: no-repeat;
@@ -130,124 +130,104 @@ body {
     width: 100%;
     height: 15%;
     bottom: 0;
-    background: linear-gradient(0deg,rgb(0, 0, 0)15%, rgba(255,255,255,0)70%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 15%, rgba(255, 255, 255, 0) 70%);
 }
 
-.main-col{
+.main-col {
     display: flex;
     justify-content: space-between;
-    padding-top: 100px;
-    padding-left: 300px;
-    padding-right: 300px;
-    padding-bottom: 200px;
+    padding: 100px 300px 200px;
 }
 
-.hero h1{
+.hero h1 {
     font-size: 24px;
     color: white;
     text-align: center;
 }
 
-.col-1-pokeball{
+/* Pokeball Sections */
+.col-1-pokeball,
+.col-2-pokeball,
+.col-3-pokeball {
     padding: 100px;
     display: flex;
+    align-items: center;
 }
 
-
-.col-1-pokeball img{
+.col-1-pokeball img,
+.col-2-pokeball img,
+.col-3-pokeball img {
     width: 250px;
     height: 250px;
 }
 
-.col-1-pokeball h2{
+.col-1-pokeball h2,
+.col-2-pokeball h2,
+.col-3-pokeball h2 {
     font-size: 18px;
 }
 
-.col-1-pokeball p{
-    font-size: 18px;
-    text-align: justify;
-}
-
-.col-1-text{
-    padding-left: 100px;
-    color: white;
-}
-
-.col-2-pokeball{
-    padding: 100px;
-    display: flex;
-}
-
-.col-2-pokeball img{
-    padding-left: 100px;
-    width: 250px;
-    height: 250px;
-}
-
-.col-2-pokeball h2{
-    font-size: 18px;
-}
-
-.col-2-pokeball p{
+.col-1-pokeball p,
+.col-2-pokeball p,
+.col-3-pokeball p {
     font-size: 18px;
     text-align: justify;
 }
 
-.col-2-text{
-    justify-content: space-between;
-    color: white;
-}
-
-.col-3-pokeball{
-    padding: 100px;
-    display: flex;
-}
-
-.col-3-pokeball img{
-    width: 250px;
-    height: 250px;
-}
-
-.col-3-pokeball h2{
-    font-size: 18px;
-}
-
-.col-3-pokeball p{
-    font-size: 18px;
-    text-align: justify;
-}
-
-.col-3-text{
+.col-1-text,
+.col-2-text,
+.col-3-text {
     padding-left: 100px;
     color: white;
 }
 
-.all-pokeball{
+.col-2-pokeball img {
+    padding-left: 100px;
+}
+
+/* All Pokeball Section */
+.all-pokeball {
     color: white;
     font-size: 36px;
     text-align: center;
 }
 
-.con-4-pokeball{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
-    margin: 50px;
+/* Card Styles */
+.con-4-pokeball {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
-.card{
+
+.card {
     background-color: #1a1a1a;
     color: #fff;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    margin: 20px;
-    width: 200px;
     box-shadow: 0px 0px 10px rgba(187, 187, 187, 0.5);
     background-image: url(pokedex-image/Background-Pokedex-Img.png);
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: rotate(-10deg);
+    box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8);
+}
+
+.card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
 }
 
 .card button {
@@ -264,40 +244,10 @@ body {
     background-color: #ff4500;
     transform: scale(1.1);
 }
- 
 
-.card h2 {
-    margin-bottom: 10px;
-}
-
-.card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-.bottom-img{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    position: relative; 
-}
-
-.card:hover {
-    transform: rotate(-10deg); 
-    box-shadow: 0 0 15px 5px rgba(255, 85, 0, 0.8); 
-}
-
-
+/* Popup Styles */
 .popup {
-    display: none; 
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -320,26 +270,28 @@ body {
     float: right;
 }
 
-/* CSS untuk tampilan responsif */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-col {
+        padding: 100px 150px 200px;
+    }
 
-/* Aturan untuk layar kecil (ponsel) */
+    .con-4-pokeball {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .logo-container {
-        display: flex;
         justify-content: center;
         width: 100%;
     }
 
     .menu-toggle {
-        display: block; /* Tampilkan tombol toggle */
+        display: block;
         position: absolute;
         top: 15px;
         right: 20px;
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
         z-index: 1001;
     }
 
@@ -361,72 +313,26 @@ body {
     }
 
     .nav-links ul {
-        list-style: none;
-        margin: 0;
         padding: 10px;
-        width: 100%;
-    }
-
-    .nav-links ul li {
-        margin: 5px 0;
     }
 
     .nav-links ul li a {
-        display: block;
-        width: 100%;
-        text-align: left;
-        color: white;
         padding: 10px;
-        text-decoration: none;
-        border-radius: 5px;
         font-size: 16px;
     }
 
-    .nav-links ul li a:hover {
-        background: linear-gradient(to right, #ff4500, #ff1493);
-        color: white;
-    }
-
     .header-buttons {
-        display: none; /* Sembunyikan tombol di luar toggle menu */
-    }
-    .website-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        display: none;
     }
 
-    .logo {
-        height: 50px;
-        margin-left: 0;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-
-    .header-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    /* Sembunyikan gambar tiga bola di awal halaman */
     .main-col {
         display: none;
     }
 
-    /* Atur Pokeball, Master Ball, dan Ultra Ball agar vertikal dengan penjelasan di bawahnya */
-    .col-1-pokeball, 
-    .col-2-pokeball, 
+    .col-1-pokeball,
+    .col-2-pokeball,
     .col-3-pokeball {
         flex-direction: column;
-        align-items: center;
         padding: 20px;
     }
 
@@ -436,74 +342,26 @@ body {
         margin-bottom: 10px;
     }
 
-    .col-1-text, 
-    .col-2-text, 
+    .col-1-text,
+    .col-2-text,
     .col-3-text {
         text-align: center;
         padding: 0;
     }
 
-    .col-1-text p{
-        font-size: 14px; /* Ukuran font yang lebih kecil */
-    }
-    .col-2-text p{
-        font-size: 14px; /* Ukuran font yang lebih kecil */
-    }
-    .col-3-text p{
-        font-size: 14px; /* Ukuran font yang lebih kecil */
+    .col-1-text p,
+    .col-2-text p,
+    .col-3-text p {
+        font-size: 14px;
     }
 
-    /* Susun kartu Pokeball secara vertikal */
     .con-4-pokeball {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px 0;
+        grid-template-columns: 1fr;
     }
 }
 
-
-
-/* Ukuran layar menengah (tablet) */
-@media (max-width: 1024px) {
-    nav ul {
-        gap: 15px;
-    }
-
-    .hero {
-        height: 70vh;
-    }
-
-    .type-pokemon {
-        gap: 15px;
-    }
-
-    .type-pokemon button {
-        width: 120px;
-        height: 45px;
-    }
-
-    .con-1-pokedex, 
-    .con-2-pokedex, 
-    .con-3-pokedex {
-        gap: 20px;
-    }
-
-    .card {
-        width: 45%;
-    }
-
-    .card img {
-        max-height: 180px;
+@media (max-width: 480px) {
+    .con-4-pokeball {
+        grid-template-columns: 1fr;
     }
 }
-
-
-
-
-
